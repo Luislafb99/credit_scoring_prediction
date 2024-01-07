@@ -75,28 +75,7 @@ Para la selección de modelos tomamos las metricas de Accuracy, Recall, Precisi�
 <img width="740" alt="image" src="https://github.com/Luislafb99/credit_scoring_prediction/assets/152426197/0c179942-993d-4558-8428-7b08b0770370">
 </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+El modelo KNN destaca en términos de precisión general (accuracy), precisión en la identificación de clientes morosos (precision), y equilibrio entre precisión y capacidad para identificar morosos (F1_Score). Aunque el modelo de árbol de decisión tiene un recall ligeramente superior (capacidad para identificar morosos), el KNN logra un buen equilibrio entre todas las métricas. Por lo tanto, basándonos en el conjunto de métricas y considerando los objetivos del negocio, el modelo KNN parece ser la elección preferida.
 
 
 
