@@ -68,7 +68,7 @@ Los resultados se muetran en las siguientes matrices de confusión:
 <img width="762" alt="image" src="https://github.com/Luislafb99/credit_scoring_prediction/assets/152426197/f18cc726-b96a-4222-8fb1-b2cf5b46c07d">
 </p>
 
-## 📌Evaluación y selección de modelos
+## 📌Evaluación y selección de modelos 🎯
 
 Para la selección de modelos tomamos las metricas de Accuracy, Recall, Precisión, F1_Score y Auc_Roc.
 <p align="center">
