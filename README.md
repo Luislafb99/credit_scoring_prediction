@@ -1,4 +1,4 @@
-# Credit Scoring Prediction
+# 📌Credit Scoring Prediction💳📊
 
 Uno de los mayores desafíos en las entidades financieras es lidiar con clientes morosos. La solución más eficaz es abordar este problema antes de otorgar un crédito.
 
@@ -18,7 +18,7 @@ Dentro de nuestra base de datos, compararemos el rendimiento de tres modelos de 
 Este análisis nos permitirá seleccionar el modelo más adecuado para predecir y gestionar el riesgo crediticio de manera eficiente.
 
 
-## Configuración del entorno
+## 📌Configuración del entorno
 
 En este proyecto, emplearemos el lenguaje de programación Python junto con sus bibliotecas fundamentales, como pandas, seaborn, matplotlib y sklearn.
 
@@ -29,14 +29,58 @@ Definiremos dos variables globales clave:
 -**resultados**: Un diccionario que se utilizará para almacenar las métricas de rendimiento de los modelos, facilitando la comparación entre ellos.
 
 
-## Preprocesamiento de datos
+## 📌Preprocesamiento de datos
 
-En esta sección, abordaremos la eliminación de posibles entradas duplicadas y la gestión de datos nulos mediante el uso de la biblioteca pandas. Además, llevaremos a cabo la conversión de valores categóricos a numéricos. Todo este proceso se realizará dentro de la función **procesar_datos()**.
+En este apartado, nos enfocaremos en la detección y eliminación de posibles entradas duplicadas, así como en el manejo de datos nulos utilizando la biblioteca pandas. Además, ejecutaremos la conversión de valores categóricos a numéricos. Todas estas operaciones serán llevadas a cabo de manera eficiente dentro de la función **procesar_datos()**.
 
 
-## Exploración de datos
+## 📌Exploración de datos 📊
 
-Se tomara 
+En el proceso de Análisis Exploratorio de Datos (EDA), nos propusimos evaluar si variables como sexo, edad, tiempo de pago del crédito y monto son significativas. Para realizar esto, filtramos los datos y creamos nuevos atributos dentro de la función feature_engineering().
+
+A continuación, presentamos algunos datos relevantes visualizados:
+<p align="center">
+<img width="755" alt="image" src="https://github.com/Luislafb99/credit_scoring_prediction/assets/152426197/8122e58f-1070-4461-bf8f-28095f0cec03">
+</p>
+La variable objetivo es Default, donde 0 indica que un titular no es moroso y 1 indica que sí lo es. Observamos un desbalance en los datos, ya que contamos con 700 buenos clientes y 300 malos clientes. Para abordar este desequilibrio, optamos por utilizar SMOTE, una técnica diseñada para contrarrestar el desbalance de clases en conjuntos de datos. Esto ayudará a reducir el sesgo asociado a la clase subrepresentada, mejorando así los resultados de nuestros modelos. Para implementar SMOTE, utilizaremos la librería imblearn.over_sampling.
+
+Además, examinamos la correlación entre las variables, especialmente con respecto a Default:
+
+<p align="center">
+<img width="741" alt="image" src="https://github.com/Luislafb99/credit_scoring_prediction/assets/152426197/026ca2f8-9382-452d-8c30-930abad54b74">
+</p>
+
+Observamos que algunos atributos pueden ser eliminados después de la creación de los nuevos atributos mencionados anteriormente, por lo tanto, procedimos a eliminarlos.
+
+Este análisis nos permitirá tomar decisiones informadas sobre qué variables son más relevantes para nuestros modelos y realizar las modificaciones necesarias para mejorar la calidad de los datos.
+
+## 📌Construcción de modelos
+
+En la construcción de modelos, dividimos entre datos de entrenamiento(train) y datos de prueba(test) y normalizamos los datos, esto para poder tener mejores resultados con la implementación de los modelos.
+Las librerias y métodos que se usaron fueron:
+<p align="center">
+<img width="466" alt="image" src="https://github.com/Luislafb99/credit_scoring_prediction/assets/152426197/fecd73c9-a727-4ae1-90cc-cbc2eb1fa925">
+</p>
+De estos métodos usamos .fit() y .prediction(), para entrenar y realizar predicciones con los datos que tomamos como x_test.
+
+Los resultados se muetran en las siguientes matrices de confusión:
+<p align="center">
+<img width="762" alt="image" src="https://github.com/Luislafb99/credit_scoring_prediction/assets/152426197/f18cc726-b96a-4222-8fb1-b2cf5b46c07d">
+</p>
+
+## 📌Evaluación y selección de modelos
+
+Para la selección de modelos tomamos las metricas de Accuracy, Recall, Precisión, F1_Score y Auc_Roc.
+<p align="center">
+<img width="740" alt="image" src="https://github.com/Luislafb99/credit_scoring_prediction/assets/152426197/0c179942-993d-4558-8428-7b08b0770370">
+</p>
+
+
+
+
+
+
+
 
 
 
